@@ -10,29 +10,52 @@
 	<body>
 <!--header-->
 	<header>
-		<div>
 			<div class="header_top">
 				<img src="img/1.png"/>
+				<img class="none" src="img/9.png"/>
 				<img src="img/8.png"/>
 			</div>
 			<div class="header_bottom">
-				<div class="header_b_b"></div>
-				<div class="header_b_b"></div>
-				<div class="header_b_b"></div>
-				<div class="header_b_b"></div>
-				<div class="header_b_b"></div>
-				<div class="header_b_b"></div>
+				<div class="header_b_b">首页</div>
+				<div class="header_b_b">解决方案</div>
+				<div class="header_b_b">活动咨询</div>
+				<div class="header_b_b">关于我们</div>
+				<div class="header_b_b">智能健身房</div>
+				<div class="header_b_b">下载APP</div>
 			</div>
-		</div>	
 	</header>
 		
 	
 <!-- banner -->
+	<div class="banner">
+		<div class="coverage">
+			<div class="banner_wz">
+				<h1>未来已至</h1>
+				<h2>全新健身房智能一体化管理方案</h2>
+				<span id="banner_span"><a href="../item/subpage2.html" target="_blank">抢先体验</a></span>
+			</div>
+		</div>
+	</div>
 		
 			
 			
 
 <!-- intro  简介 -->
+	<dir class="intro">
+		<div class="intro_top">
+			<h2>健身房管理新体验</h2>
+			<p>打造最新健身房管理模式，全⾯升维场馆训练体验</p>
+			<p>全⽅位回应健⾝场馆诉求，⾃上而下实现⼀体化</p>
+			<p>智能化管理</p>
+		</div>
+		<div class="intro_center">
+			<img src="img/10.png">
+			<img src="img/11.png">
+			<img src="img/12.png">
+		</div>
+			<span id="banner_span"><a href="../item/subpage2.html" target="_blank">抢先体验</a></span>
+		
+	</dir>
 			
 		
 
@@ -54,7 +77,6 @@
 
 
 	<script type="text/javascript" src="js/jquery-1.11.3.js" ></script>
-	<script type="text/javascript" src="js/swiper.min.js"></script>
 	<script>
 		 
 	</script>
@@ -64,6 +86,23 @@
 
 
 	<script type="text/javascript">
-
+		$(function(){
+			$("img:first").click(function(){
+				$("img:first").css({"display":"none"});
+				$(".none").css({"display":"block"});
+				$(".header_bottom").css({"display":"block"});
+			});
+			$(".none").click(function(){
+				$("img:first").css({"display":"block"});
+				$(".none").css({"display":"none"});
+				$(".header_bottom").css({"display":"none"});
+			});
+			$(".header_b_b").click(function(){
+				$(this).css({"color":"#00dce6"});
+			});
+			$(".header_b_b").mouseout(function(){
+				$(this).css({"color":"#757575"});
+			});
+		});
 
 	</script>

@@ -26,7 +26,7 @@ header{
 	width:100%;
 	height:5.9rem;
 	background: white;
-	
+	position: relative;
 	border-bottom: 2px solid #efefef;
 }
 .header_top{
@@ -34,6 +34,7 @@ header{
 	width:21rem;
 	height:3rem;
 	padding-top: 1.4rem;
+	position: relative;
 }
 .header_top img:nth-child(1){
 	width:2rem;
@@ -42,30 +43,148 @@ header{
 	margin-top: 0.7rem;
 }
 .header_top img:nth-child(2){
+	width:2rem;
+	height:1.7rem;
+	float: left;
+	margin-top: 0.7rem;
+	position: absolute;
+	left:0;
+	display: none;
+}
+.header_top img:nth-child(3){
 	width:14.1rem;
 	height:3rem;
 	float: right;
 }
 .header_bottom{
-	height:35.5rem;
+	top:6.1rem;
+	height:36rem;
 	width:100%;
-	background:pink;
+	position: absolute;
+	display: none;
+	z-index: 10;
+	background: white;
 }
 .header_b_b{
 	width: 100%;
-	height:5.8rem;
-	background:skyblue;
+	height:5.85rem;
 	border-bottom: 2px solid #efefef;
+	padding-left: 2rem;
+	line-height: 5.8rem;
+	font-size: 1.5rem;
+	color:#757575;
+}
+.header_b_b:first-child{
+	color: #292929;
+	font-weight:900;
 }
 
 	
 
 	
 	
-/*banner */			
+/*banner */	
+.banner{
+	width: 100%;
+	height:30rem;
+	position: relative;
+	background: url(../img/2.png);
+	background-size: cover;
+	border-bottom: 2px solid #efefef;
+}	
+.coverage{
+	width: 100%;
+	height:30rem;
+	background:rgba(21,21,21,0.4);
+	position:absolute;
+	z-index: 2;
+	top:0;
+}
+.banner_wz{
+	z-index: 10;
+	width: 26rem;
+	height:23.7rem;
+	margin:6rem auto auto auto;
+}
+.banner_wz h1{
+	color:white;
+	font-size: 5.5rem;
+	text-align: center;
+	margin-bottom: 2.8rem;
+}
+.banner_wz h2{
+	color:white;
+	font-size: 2.2rem;
+	text-align: center;
+	margin-bottom: 6rem;
+}
+.banner_wz span{
+	width:24rem;
+	height:4rem;
+	background: #44bfd1;
+	border-radius: 2rem;
+	text-align: center;
+	line-height: 4rem;
+	display: block;
+	margin:0 auto;
+}
+.banner_wz span a{
+	font-size: 1.5rem;
+	color:white;
+}
 	
 
 /* intro  简介 */
+.intro{
+	height: 54rem;
+	width:100%;
+	background: url(../img/3.png);
+	background-size: cover;
+	margin-top:0;
+	margin-bottom:0; 
+	padding: 0;
+	padding-top:10.4rem;
+}
+.intro_top h2{
+	font-size: 2.3rem;
+	color: #262626;
+	text-align: center;
+	margin-bottom:1.7rem;
+}
+.intro_top p{
+	font-size: 1.4rem;
+	color: #5d5d5f;
+	text-align: center;
+	line-height: 3.2rem;
+}
+.intro_center{
+	width: 100%;
+	height:18.3rem;
+	margin-top: 6.3rem;
+	background: pink;
+	margin-bottom: 4rem;
+	display: -webkit-flex;
+}
+.intro_center img{
+	width:28.1rem;
+	height:18.2rem;
+	margin:0 1.3rem;
+	flex-shrink:0;
+}
+.intro span{
+	width:24rem;
+	height:4rem;
+	background: #31343d;
+	border-radius: 2rem;
+	text-align: center;
+	line-height: 4rem;
+	display: block;
+	margin:0 auto;
+}
+.intro span a{
+	font-size: 1.5rem;
+	color:white;
+}
 
 	
 /* slideshow 轮播图 */	
