@@ -25,7 +25,7 @@
 			</div>
 	</header>
 		
-	
+	<div class="content">
 <!-- banner -->
 	<div class="banner">
 		<div class="coverage">
@@ -41,7 +41,7 @@
 			
 
 <!-- intro  简介 -->
-	<dir class="intro">
+	<div class="intro">
 		<div class="intro_top">
 			<h2>健身房管理新体验</h2>
 			<p>打造最新健身房管理模式，全⾯升维场馆训练体验</p>
@@ -50,35 +50,103 @@
 		</div>
 		<div class="intro_center">
 			<img src="img/10.png">
+			<img src="img/13.png">
 			<img src="img/11.png">
-			<img src="img/12.png">
+			<img class="intro_img" src="img/12.png">
 		</div>
 			<span id="banner_span"><a href="../item/subpage2.html" target="_blank">抢先体验</a></span>
-		
-	</dir>
+	</div>
 			
 		
 
 <!-- slideshow 轮播图 -->
 
 
+	<div class="slideshow" style="height:500px;">
+			 <div class="swiper-container">
+			    <div class="swiper-wrapper">
+			      <div class="swiper-slide"><a href="#"><img width="100%"; height="500px"; src="img/4.png"></a></div>
+			      <div class="swiper-slide"><a href="#"><img width="100%"; height="500px"; src="img/7.png"></a></div>
+			    </div>
+			    <div class="swiper-pagination"></div>
+			  </div>
+		</div>
+
 <!-- activity 活动咨询 -->
+	<div class="activity">
+		<div class="intro_top">
+			<h2>活动咨询</h2>
+			<p>最新的健身赛事、世界范围内的成功案例分析、极</p>
+			<p>具实操性的营销策略...</p>
+			<p>了解你的客户，与同行增强互动，植入潮流与有范</p>
+			<p>的DNA，让你的健身房跟上行业脚步</p>
+		</div>
+		<div class="activity_center">
+			<img src="img/14.png">
+			<img src="img/15.png">
+			<img src="img/16.png">
+		</div>
+			<span class="activity_span"><a href="../item/subpage2.html" target="_blank">抢先体验</a></span>
+		
+	</div>
 		
 <!-- partner 合作伙伴 -->
+
+	<div class="activity partner">
+		<div class="intro_top">
+			<h2>合作伙伴</h2>
+			<p>仅用4年，青橙迅速成长成为行业的领导这，那些与伙</p>
+			<p>伴们共同书写传奇在继续</p>
+			<p>与互联网，支持每个人健身从业者的梦想</p>
+		</div>
+		<div class="partner_center">
+			<img src="img/6.png">
+		</div>
+	</div>
 			
 <!-- consult  咨询 -->
 
-		
-<!-- introduce  介绍 -->
-		
+		<div class="consult">
+			<div class="consult_content">
+				<div class="consult_left">
+					<h4>想要了解青橙</h4>
+					<p>填写信息，我们的客服人员将尽快与您</p>
+					<p>取得联系，帮助您更快的了解青橙。</p>
+					<span class="consult_span"><a href="../item/subpage2.html" target="_blank">提交咨询</a></span>
+				</div>
+
+				
+			</div>
+		</div>
 
 <!-- bottom 底部 -->
-		
+		<div class="bottom_box">
+			<p>©2016 - 2018 北京青橙信息技术有限公司 京ICP备</p>
+			<p>14045334号-1 京公网安备11010502027182</p>
+		</div>
+
+	</div>		
+	</body>
+</html>
+
+
+
+
 
 
 	<script type="text/javascript" src="js/jquery-1.11.3.js" ></script>
+	<script type="text/javascript" src="js/swiper.min.js"></script>
 	<script>
-		 
+		  var swiper = new Swiper('.swiper-container', {
+		    direction : 'horizontal',
+		    effect : 'slide',
+		    loop : true,
+		    speed:500,
+		    autoplay: {
+		      delay: 3000,
+		    }
+		  });
+
 	</script>
 
 
@@ -88,14 +156,14 @@
 	<script type="text/javascript">
 		$(function(){
 			$("img:first").click(function(){
-				$("img:first").css({"display":"none"});
-				$(".none").css({"display":"block"});
-				$(".header_bottom").css({"display":"block"});
+				$("img:first").fadeOut();
+				$(".none").fadeIn();
+				$(".header_bottom").slideDown();
 			});
 			$(".none").click(function(){
-				$("img:first").css({"display":"block"});
-				$(".none").css({"display":"none"});
-				$(".header_bottom").css({"display":"none"});
+				$("img:first").fadeIn();
+				$(".none").fadeOut();
+				$(".header_bottom").slideUp();
 			});
 			$(".header_b_b").click(function(){
 				$(this).css({"color":"#00dce6"});
